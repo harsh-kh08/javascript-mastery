@@ -1,10 +1,11 @@
 /*
 
-- Whenever we take input in form, it happens that we don't know what the data type of value.
+- Whenever we take input in form, it happens that we don't know what the data type of value is inputed ?
+"NaN" stands for Not A Number
 So we use typeOf()
-- If we want to convert a string into a number we use Number() method.
+- If we want to convert String into a number we use Number() method.
 - Suppose we get a value as "33aa", if we convert it into the number using Number(), we get value as "NaN"
-but we the data type will be number.
+but the data type will become number.
 - If we have variable with value as "null" and when we convert it into Number then the value becomes 0
 - If we have variable with value as "undefined" and when we convert it into Number then the value becomes "NaN"
 - If we have variable with boolean value as true and when we convert it into Number then the value becomes 1
