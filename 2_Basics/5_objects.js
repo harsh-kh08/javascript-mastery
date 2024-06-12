@@ -11,7 +11,7 @@ const course = {
 
 course.courseInstructor
 // In destructuring, we will use variable name same as key =>
-// const{courseInstructor} = course 
+const{courseInstructor} = course 
 
 // In destructuring , we can also use our own variable name as =>
 const {courseInstructor: instructor} = course
