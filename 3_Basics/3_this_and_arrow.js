@@ -54,3 +54,41 @@ console.log(this.userName); //  Will return undefined value as 'this' is not use
 
 // Defining Arrow Function
 
+const newUser = ()=>
+    {
+       let username="Jacks"
+    }
+
+    const newUser1 = ()=>
+        {
+           let username="Jacks"
+           console.log(this); // 'This' will not work because it is not used for current context of function
+        }
+
+        newUser1();
+
+        // Arrow function with parameters
+const addNum =(num1, num2)=>
+    {
+return num1+num2
+    }
+
+
+    console.log(addNum(4,5));
+
+    // Arrow function with implicit return
+const addNum1 = (num1,num2)=> num1+num2;
+
+
+// In Arrow function if we use curly braces we have to write return keyword otherwise if we use bracket then we don't have to write return keyword
+
+
+// Implicit Arrow function to return object
+
+
+const techUser = (name)=>({username:name}); // functiom to return an object using implcit arrow.
+
+const techUser1 = (name)=>({username:this.name}); // usename value will be undefined because 'this' keyword because name is not present in the current context of object.
+
+console.log(techUser("TOM"));
+
