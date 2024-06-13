@@ -61,6 +61,12 @@ if (true) {
 
 /*------------------------- Hoisting in Javascript ------------------------------*/
 
+
+// Hoisting is a mechanism in JavaScript that moves all variable and function declarations to the top of their scope before code execution. 
+
+
+//Hoisting means that a variable or function can be used before it has been declared.
+
 console.log(addone(5)) // This function will be executed
 
 function addone(num){
@@ -68,6 +74,7 @@ function addone(num){
 }
 
 
+//Hoisting does not work with arrow functions. Arrow functions are always hoisted to the top of their scope, but they are not assigned a value until they are executed.
 
 addTwo(5) // This function call will not be executed as it is declared in differently manner
 

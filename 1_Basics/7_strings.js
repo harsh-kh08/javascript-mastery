@@ -1,20 +1,20 @@
 /*
 
-- We can use single quotes or double qoutes to represent a string.
+- We can use single quotes or double quotes to represent a string.
 
 - We use '+' operator to concatenate two strings. For ex: console.log("javascript" + "ES6").
 
-- But there will be case when we qant to concatenate or put together different dataTypes so we will use backtick(``).
+- But there will be case when we want to concatenate or put together different dataTypes so we will use backtick(``).
 
 - Instead of using '+', we will use backtick because it is the modern method of concatenation. 
 
 For ex: console.log(`Hello, my name is ${variable1} and my repo count is ${variable2}`).
 
-- In backtick, we actuallly make placeholders.
+- In backtick, we actually make placeholders.
  
 - To remove whitespaces from string, we use trim() method.
 
-- In orer to replace particular part of a string, we ise replace() mehtod.
+- In orer to replace particular part of a string, we use replace() mehtod.
 
 - In order to split the string on basis of seperator like space or dash('-'), we use .split() method. 
 
@@ -53,7 +53,7 @@ const newStringOne = "   javascript    "
 console.log(newStringOne);
 console.log(newStringOne.trim());
 
-const url = "https://hitesh.com/hitesh%20choudhary"
+const url = "https://TomJakes.com/Tom%20Jakes"
 
 console.log(url.replace('%20', '-'))
 

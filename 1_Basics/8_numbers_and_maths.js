@@ -2,7 +2,7 @@
 
 ------------------------------------ Numbers ---------------------------------------------------------
 
-- In order to define variable of dataType number as  const num = 300.
+- In order to define variable of dataType number as const num = 300.
 
 - JS automatically detect dataType of num as number.
 
@@ -33,8 +33,11 @@ console.log(hundreds.toLocaleString('en-IN')); // 1,00,000
 
 ------------------------------------ Math library ------------------------------------------------
 
-- Math is default and it is itself an object which has a lot of properties.
+- Math is default object and it is itself an object which has a lot of properties.
 - In order to find properties of Math obj - Go to terminal and code - console.log(Math);
+
+- To print object with its key value pair and function , we use command - 'console.log(obj)'
+
 
 */
 

@@ -4,7 +4,7 @@
 
 - In js, arrays make shallow copy.
 
-- Whenver you need to find methods or key-value pairs in objects, you have to type it in the browser compiler and then expand it to see its properties and functions.
+- Whenver you need to find methods or key-value pairs in objects, you have to type it in the browser compiler and then expand it to see its properties and functions.(console.log(obj));
 
 - The .slice() method returns a new array containing a subset of the original array, while the splice() method modifies the original array by removing or replacing elements and/or adding new elements.
 

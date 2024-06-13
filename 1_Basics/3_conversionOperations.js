@@ -77,6 +77,41 @@ let str3 = str1 + str2
 // console.log("1" + 2 + 2); 
 // console.log(1 + 2 + "2");
 
+
+/*
+1. console.log("1" + 2);
+
+Output: 12
+Explanation: The + operator is used for both addition and string concatenation in JavaScript. When one of the operands is a string, the other operand is converted to a string and concatenation is performed. Here, "1" is a string and 2 is a number. The number 2 is converted to the string "2", and then they are concatenated to produce "12".
+
+2. console.log(1 + "2");
+
+Output: 12
+Explanation: Similar to the first example, 1 is a number and "2" is a string. The number 1 is converted to the string "1", and then they are concatenated to produce "12".
+
+
+3. console.log("1" + 2 + 2);
+
+Output: 122
+Explanation: This statement is evaluated from left to right. First, "1" (a string) and 2 (a number) are concatenated to produce "12". Then, the result "12" (a string) is concatenated with 2 (a number), which is converted to the string "2", resulting in "122".
+
+
+4. console.log(1 + 2 + "2");
+
+Output: 32
+Explanation: This statement is also evaluated from left to right. First, 1 and 2 (both numbers) are added together to produce 3. Then, 3 (a number) is concatenated with "2" (a string), converting 3 to the string "3", resulting in "32".
+To summarize:
+
+"1" + 2 results in "12" (string concatenation).
+1 + "2" results in "12" (string concatenation).
+"1" + 2 + 2 results in "122" (string concatenation).
+1 + 2 + "2" results in "32" (addition followed by string concatenation).
+
+
+*/
+
+
+
 // console.log( (3 + 4) * 5 % 3);
 
 // console.log(+true);

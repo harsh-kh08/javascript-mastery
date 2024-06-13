@@ -19,7 +19,7 @@ const user = {
 }
 
 
-user.welcome();// Till this call, username value till this current context (current scope) is "Tom"
+user.welcome();// Till this call, username in  this current context (current scope) is "Tom"
 user.username="Sam"
 user.welcome() // Now our username for current context (current scope)is "Sam"
 
@@ -31,14 +31,14 @@ user.welcome() // Now our username for current context (current scope)is "Sam"
 
 //But now, we have taken out that engine from the browser and named it differently like node or bun etc.
 
-// Whenever the engine that runs in the browser has global object as Window object. That why we are able to capture all the event happening inside browser.
+// Whenever the engine that runs in the browser has global object as Window object. That why we are able to capture all the event happening inside browser. We can get it by 'console.log(this)' inside browser console.
 
 // But whenver the engine that runs outside the browser or on your local computer, the global object is null '{}'
 
 
 // Remember, we can use 'this' to get key value pairs for current context only for objects
 
-// But, if we cannot  use 'this' inside the context of function. For example 
+// But, we cannot  use 'this' to find the current  context of function. For example 
 
 function ftn()
 {
@@ -62,7 +62,7 @@ const newUser = ()=>
     const newUser1 = ()=>
         {
            let username="Jacks"
-           console.log(this); // 'This' will not work because it is not used for current context of function
+           console.log(this); // 'This' will not work because it is not used to find current context variables of function
         }
 
         newUser1();
@@ -88,7 +88,7 @@ const addNum1 = (num1,num2)=> num1+num2;
 
 const techUser = (name)=>({username:name}); // functiom to return an object using implcit arrow.
 
-const techUser1 = (name)=>({username:this.name}); // usename value will be undefined because 'this' keyword because name is not present in the current context of object.
+const techUser1 = (name)=>({username:this.name}); // username value will be undefined because because name is not present in the current context of object rather it is a variable defined inside a function
 
 console.log(techUser("TOM"));
 
