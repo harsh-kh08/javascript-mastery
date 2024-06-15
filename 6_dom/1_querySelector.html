@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black {
+            background-color: antiquewhite;
+            color: teal
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <h1>DOM Learning</h1>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eius architecto quaerat itaque
+        ab
+        voluptatem veniam nihil, consequuntur rerum facere ipsum debitis libero iste eaque illo! Eius facilis quaerat
+        error?
+    </div>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+</body>
+
+</html>
+
+<!----  Difference between innerHTML, textContent, innerText
+
+
+- innerText - text which is visible on the screen
+
+
+- textContent - all the textContent present inside or between the tag
+
+
+- innerHTMl - used to get content as well as htmlcode present inside the selected tag
+
+- document.querySelectorAll('p') -> gives us a NodeList of elements
+
+- Remember - Nodelist in DOM is not same as arrayList
+
+- To access NodeList elements , use index. For ex- list[0] where list is a NodeList of <p> tags
+
+- NodeList of DOM has forEach() method  in its prototype.
+
+- list.forEach((li)=>li.style.color="red")    
+
+
+- To covert HTMLCOllections or NodeList in DOM to array, we can do - 
+
+Arrays.from(list) where list is DOM's NodeList
+
+- Browser converts web page into DOM - 
+
+- What Dom does is that it converts html tag into objects so that it becomes easy for js to manipulate these objects. Document is itself an object which contains all other object
+
+> 

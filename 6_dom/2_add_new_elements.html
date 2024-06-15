@@ -1,0 +1,110 @@
+<!--
+
+- Difference between childNode and children property of DOM element
+
+* childNodes poperty -
+
+What it returns: A live NodeList of all child nodes of the specified node. This includes not just element nodes, but also text nodes, comment nodes, and other types of nodes.
+
+Type of collection: NodeList (which is live, meaning it updates automatically when the DOM changes).
+
+Code - 
+
+const parentElement = document.getElementById('parent');
+const allChildNodes = parentElement.childNodes;
+console.log(allChildNodes); // Logs all child nodes, including text and comment nodes.
+
+
+* children Property
+
+What it returns: A live HTMLCollection of only the element child nodes of the specified node. This does not include text nodes, comment nodes, or other non-element nodes.
+
+Type of collection: HTMLCollection (which is live, meaning it updates automatically when the DOM changes).
+
+Code -
+
+const parentElement = document.getElementById('parent');
+const elementChildren = parentElement.children;
+console.log(elementChildren); // Logs only the element child nodes.
+
+
+
+Key Differences
+
+1. Node Types Included:
+
+childNodes includes all types of child nodes (elements, text nodes, comments, etc.).
+children includes only element nodes.
+
+2. Type of Collection:
+
+childNodes returns a NodeList.
+children returns an HTMLCollection.
+
+3. Usage Context:
+
+Use childNodes when you need to work with all types of nodes.
+Use children when you are only interested in element nodes.
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+
+</body>
+<script>
+
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(document.querySelectorAll('.day'))
+    console.log(parent.children);// This will return HTML collections of elements present inside the parent class tag
+    console.log(parent.children[1].innerHTML)
+    for (let index = 0; index < parent.children.length; index++) {
+
+        console.log(parent.children[index].innerHTML);
+
+
+    }
+
+    console.log(parent.firstElementChild)
+    console.log(parent.lastElementChild)
+
+    const dayOne = document.querySelector('.day');
+
+    console.log(dayOne)
+    console.log(dayOne.parentElement)
+    console.log(dayOne.nextElementSibling)
+
+
+    console.log("Nodes : " + parent.childNodes)
+
+
+</script>
+
+</html>

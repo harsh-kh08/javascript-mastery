@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create DOM elements</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    // Create Element in DOM
+    const div = document.createElement('div')
+
+    // We have created div but it is not visible on the webpage beacuse the div is in the memory and it is not attched to the page.
+
+    // The div element will only get attatched to the page when we give command (append)
+
+
+    console.log(div)
+    // div.setAttribute('class', "Hello")
+    // div.setAttribute('style', "backgroundColor:green")
+
+
+    // In html , every element is a list of nodes (nodeList) which contains list of properties which are not set.
+
+    // In order to set values,
+
+    div.className = "main"
+
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    // .setAttribute used to set attributes or properties of HTML element
+
+    div.setAttribute("title", "generated-title")
+
+    // To create nodes in DOM
+    // Instead of using innerText() function of element to set text, we would instead create a text node and append to the parent node as childNode
+    const addText = document.createTextNode("Javascript")
+
+    div.appendChild(addText);
+
+
+
+    document.body.appendChild(div);
+
+
+
+</script>
+
+</html>

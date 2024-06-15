@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color: bisque;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+
+
+
+
+    // Function to add a list item in pre existing list
+    function addItem(string) {
+        const parent = document.querySelector('ul');
+        const childElement = document.createElement('li');
+        const addNode = document.createTextNode(string);
+        childElement.append(addNode);
+        parent.append(childElement)
+        console.log(childElement)
+    }
+
+    addItem("ruby");
+
+    // Here we have not used childElement.innerText="ruby",because it is not good practice for large scalable projects
+
+    /* ---------------------------------------------------------- ***** ----------------------------------------------------------- */
+
+    // Function to Edit an existing element
+    function editItem(string) {
+        const prevElement = document.querySelector('li:nth-child(1)');
+        const newElement = document.createElement('li');
+        const addNode = document.createTextNode(string);
+        newElement.appendChild(addNode);
+
+        prevElement.replaceWith(newElement);
+
+    }
+
+    editItem("python")
+
+    // Here we have replaced existing list element with new element
+
+    /* --------------------------------------------------------- **** ----------------------------------------------------------- */
+
+
+
+    // Function to remove an exisiting element
+
+    function removeItem() {
+        const element = document.querySelector('li:nth-child(2)');
+        element.remove()
+    }
+
+    // removeItem()
+
+    // Here we removed the selected element from the dom
+
+    /* --------------------------------------------------------- **** ----------------------------------------------------------- */
+
+
+
+
+</script>
+
+</html>
