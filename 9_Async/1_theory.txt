@@ -1,0 +1,50 @@
+Asynchronous in Javascript :
+
+
+1. Some points about default nature of javascript
+
+- Javascript is synchronous in nature so code executes in a sequential manner
+
+-  Javascript is a single-threaded language
+
+
+2. Javascript Execution Context
+
+- Execute one line of code at a time
+
+
+3. Blocking Code vs Non-Blocking Code
+
+- Blocking Code - Block the flow of the program
+
+- Non Blocking Code - Does not block Execution
+
+For example - whenever a user registers to our websites, we will write the details in our database and then after we will send success message
+So in this case , we will use blocking code only.
+
+4. Structure of Asynchronous
+
+- Java engine is a javascript execution engine, which is made up of memory heap and call stack.
+
+- Web api is always present in the browser. javascript environment is called node , bun executes
+
+- In web api, we get access of DOM, 
+
+- The task queue presence makes whole javascript very fast.
+
+- Promise also  a queue which is high priority queue.
+
+
+Flow of javascript execution -
+
+- Whenever a js executes, a call stack is made inside java engine. In java engine , there is global execution context is built.
+And then one by one functions are being loaded or pushed into the stack.
+
+- Memory allocations also happens during execution to assign memory to all the variables.
+
+- For example - we have to execute set time interval which is a type of async code. SetTime interval method is only present in web api,
+So we want this function to execute independently without blocking resources so it adds this function in task queue and then push into call stack again
+
+- There are also new web apis added in js named as fetch api. The queue built in apis like fetch is known as promise queue which has high priority than task queue.
+Promise queue is an extension of task queue only.  
+
