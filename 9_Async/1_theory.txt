@@ -48,3 +48,8 @@ So we want this function to execute independently without blocking resources so 
 - There are also new web apis added in js named as fetch api. The queue built in apis like fetch is known as promise queue which has high priority than task queue.
 Promise queue is an extension of task queue only.  
 
+5. Asynchronous code is function is allowed by the run time environment not by the v8 engine.
+'setInterval' and 'setTimeOut' is the part of asynchronous code in javascript
+
+
+
