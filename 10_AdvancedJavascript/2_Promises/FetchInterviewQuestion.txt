@@ -1,0 +1,36 @@
+fetch() global function
+
+Q. What is fetch() global function ?
+
+Ans. The global fetch() method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+The promise resolves to the Response object representing the response to your request.
+
+Q. When we send an API request to a server and we get a response of 400, so where the value will go? Resolve or Reject?
+
+Ans. A fetch() promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error. 
+A fetch() promise does not reject if the server responds with HTTP status codes that indicate errors (404, 504, etc.). 
+Instead, a then() handler must check the Response.ok and/or Response.status properties.
+The fetch() method is controlled by the connect-src directive of Content Security Policy rather than the directive of the resources it's retrieving.
+
+Q. Explain the working of fetch ?
+
+- JS Engine consists of Memory Heap and call stack
+- Call stack consists of function call and gets executed sequentially. When there is a special type of function like async function(setInterval,setTimeOut),
+then it registers the call in register call back then it inserted into queue known as Task queue
+- The Task queue contains all the callbacks when they are ready for execution they get back into the stack
+- But fetch() is a special function which is offered by Web API, is passed into special queue which is specifically vuild for fetch method.
+This queue is also known as Priority Task queue.
+- Priority Task Queue is preferred more than task queue for function execution.
+
+- fetch() working is devided into two parts -
+1. Other goes into reserving space
+2. One part goes into handling api request
+
+
+- In first part, it reserves spaces for two arrays. one is 'onFulfilled[]' and one is 'onRejection[]'
+- onFulfilled is resolution part of Promise while the onRejection[] rejection part of Promise
+
+In second part, we send the network request using third party. If we get request, the value goes into onFullfilled array.
+If we were unable to send API request, the value goes to the onRejection[] array.
+
+
